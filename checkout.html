@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Display checkout</title>
+  </head>
+  <body>
+    <form class="form2" action="thankyou.html" method="post">
+        <fieldset style="width: 60%; margin-left:auto; margin-right:auto;">
+<legend>CHECKOUT</legend><h1>Items in your bag</h1>
+<hr style="margin: 1em;">
+
+<p>
+<span id = "display_item"></span>
+</p>
+
+<label for="un">Enter username:
+    <input type="text" name="username" placeholder="Type user name..." id="un">
+</label>
+    <label for="email">Enter email address:
+        <input type="email" name="email" placeholder="Type email address...">
+    </label>
+<input type="submit" name="submit"value="SUBMIT ORDER" style="margin: 1em;">
+        </fieldset>
+    </form>
+
+<script type="text/javascript">
+let d =
+document.querySelector('#display_item');
+let l1 = sessionStorage.getItem('lotion1');
+let lp1 = sessionStorage.getItem('lotion1price');
+d.innerHTML = `${l1}... ${lp1}`
+</script>
+
+  </body>
+</html>
